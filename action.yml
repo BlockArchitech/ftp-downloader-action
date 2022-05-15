@@ -21,9 +21,6 @@ inputs:
     description: 'FTP path'
     required: true
     default: ''
-outputs:
-  time: # last time files downloaded
-    description: 'Last time files downloaded'
 runs:
   using: 'node16'
   main: 'index.js'
