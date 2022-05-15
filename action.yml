@@ -1,0 +1,29 @@
+name: 'Ftp Downloader Action'
+description: 'Downloads files from FTP server and push them to repository.'
+inputs:
+  ftp-host:  # id of input
+    description: 'FTP host'
+    required: true
+    default: ''
+  ftp-port:  # port of FTP server
+    description: 'FTP port'
+    required: true
+    default: '21'
+  ftp-user:  # user name for FTP server
+    description: 'FTP user name'
+    required: true
+    default: ''
+  ftp-password:  # password for FTP server
+    description: 'FTP password'
+    required: true
+    default: ''
+  ftp-path:  # path to download files from FTP server
+    description: 'FTP path'
+    required: true
+    default: ''
+outputs:
+  time: # last time files downloaded
+    description: 'Last time files downloaded'
+runs:
+  using: 'node16'
+  main: 'index.js'
